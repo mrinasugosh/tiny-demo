@@ -2,14 +2,29 @@ const lightRevisions = [
   {
     revisionId: '3',
     createdAt: '2024-08-21T10:11:21.578Z',
+    author: {
+      id: 'tiny.husky',
+      name: 'A Tiny Husky',
+      avatar: './tiny_husky.png',
+    },
   },
   {
     revisionId: '2',
     createdAt: '2024-08-20T08:30:21.578Z',
+    author: {
+      id: 'tiny.husky',
+      name: 'A Tiny Husky',
+      avatar: './tiny_husky.png',
+    },
   },
   {
     revisionId: '1',
     createdAt: '2024-08-19T22:26:21.578Z',
+    author: {
+      id: 'tiny.husky',
+      name: 'A Tiny Husky',
+      avatar: './tiny_husky.png',
+    },
   },
 ];
 
@@ -17,6 +32,11 @@ const revisions = [
   {
     revisionId: '3',
     createdAt: '2024-08-21T10:11:21.578Z',
+    author: {
+      id: 'tiny.husky',
+      name: 'A Tiny Husky',
+      avatar: './tiny_husky.png',
+    },
     content: `
      <h1>The Adventure Begins: A Journey into the Unknown</h1>
 
@@ -31,6 +51,11 @@ const revisions = [
   {
     revisionId: '2',
     createdAt: '2024-08-20T08:30:21.578Z',
+    author: {
+      id: 'tiny.husky',
+      name: 'A Tiny Husky',
+      avatar: './tiny_husky.png',
+    },
     content: `
       <h1>The Adventure</h1>
       <p>It was a bright and cheerful morning in the small town of Everwood. The birds were chirping, and the sun was shining warmly. Little did anyone know, today was going to be the start of something amazing. A curious and brave girl named <strong>Luna</strong> had just found an old, dusty book hidden in the attic of her grandmother's house. The book contained a mysterious code that hinted at a hidden treasure deep within the <em>Enchanted Forest</em>, a place everyone said was too dangerous to explore.</p>
@@ -40,6 +65,11 @@ const revisions = [
   {
     revisionId: '1',
     createdAt: '2024-08-19T22:26:21.578Z',
+    author: {
+      id: 'tiny.husky',
+      name: 'A Tiny Husky',
+      avatar: './tiny_husky.png',
+    },
     content: `
       <h1>Title</h1>
       <p>It was a bright and cheerful morning in the small town of Everwood. The birds were chirping, and the sun was shining warmly. Little did anyone know, today was going to be the start of something amazing. A curious and brave girl named Luna had just found an old, dusty book hidden in the attic of her grandmother's house. The book contained a mysterious code that hinted at a hidden treasure deep within the <em>Enchanted Forest</em>, a place everyone said was too dangerous to explore.</p>
@@ -77,6 +107,12 @@ document.addEventListener('DOMContentLoaded', function () {
         plugins: 'code revisionhistory',
         toolbar: 'undo redo revisionhistory | code',
         revisionhistory_fetch,
-        revisionhistory_fetch_revision
+        revisionhistory_fetch_revision,
+        revisionhistory_author: {
+          id: 'mrina.sugosh',
+          name: 'Mrina Sugosh',
+          avatar: './mrina_sugosh.png',
+        },
+        revisionhistory_display_author: true
       });
 });
