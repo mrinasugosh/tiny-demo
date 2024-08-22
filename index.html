@@ -5,22 +5,18 @@
     <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
   </head>
   <body style="margin:100px;padding:0">
-    <script>
-      tinymce.init({
-        selector: 'textarea',
-        plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount checklist mediaembed casechange export formatpainter pageembed linkchecker a11ychecker tinymcespellchecker permanentpen powerpaste advtable advcode editimage advtemplate ai mentions tinycomments tableofcontents footnotes mergetags autocorrect typography inlinecss',
-        toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough | link image media table mergetags | addcomment showcomments | spellcheckdialog a11ycheck typography | align lineheight | checklist numlist bullist indent outdent | emoticons charmap | removeformat',
-        tinycomments_mode: 'embedded',
-        tinycomments_author: 'Author name',
-        mergetags_list: [
-          { value: 'First.Name', title: 'First Name' },
-          { value: 'Email', title: 'Email' },
-        ],
-        ai_request: (request, respondWith) => respondWith.string(() => Promise.reject("See docs to implement AI Assistant")),
-      });
-    </script>
+    <script src="script.js"></script>
     <textarea>
-      Welcome to TinyMCE!
+      <h1>The Adventure Begins: A Journey into the Unknown</h1>
+
+      <p>It was a bright and cheerful morning in the small town of Everwood. The birds were chirping, and the sun was shining warmly. Little did anyone know, today was going to be the start of something amazing. A curious and brave girl named <strong>Luna</strong> had just found an old, dusty book hidden in the attic of her grandmother's house. The book contained a mysterious code that hinted at a hidden treasure deep within the <em>Enchanted Forest</em>, a place everyone said was too dangerous to explore.</p>
+
+      <p>Luna, with her faithful cat <strong>Mittens</strong> by her side, decided that this would be the day they would embark on the greatest adventure of their lives. Before leaving, Luna packed her backpack with some snacks, a bottle of water, and her <strong>coding notebook</strong>—just in case she needed to solve any puzzles along the way.</p>
+
+      <p>As Luna and Mittens approached the edge of the <em>Enchanted Forest</em>, they noticed how quiet it had become. The usual sounds of the forest were gone, replaced by the soft rustling of leaves and the gentle breeze. Luna took a deep breath, tightened her grip on the book, and stepped into the cool shade of the tall trees.</p>
+
+      <p>Suddenly, a soft glow appeared in the distance. Curious and a little nervous, Luna followed the light, only to discover a small, glowing stone embedded in the ground. Mittens meowed excitedly as Luna picked up the stone. To her amazement, the stone began to hover above her hand, glowing with a warm, golden light. Luna realized that this was no ordinary treasure—they were about to uncover a secret that had been hidden for centuries.</p>
+
     </textarea>
   </body>
 </html>
