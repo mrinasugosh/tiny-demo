@@ -113,6 +113,12 @@ document.addEventListener('DOMContentLoaded', function () {
           name: 'Mrina Sugosh',
           avatar: './mrina_sugosh.png',
         },
-        revisionhistory_display_author: true
+        revisionhistory_display_author: true,
+        revisionhistory_css_url: './revisionhistory.css',
+        revisionhistory_diff_classes: {
+          addition: 'added',
+          removal: 'removed',
+          modification: 'modified'
+        },
       });
 });

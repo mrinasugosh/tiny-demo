@@ -1,0 +1,35 @@
+/* Styles for added text */
+.added {
+    background-color: #d4edda; /* Light green background */
+    color: #155724;            /* Dark green text */
+    text-decoration: none;     /* No underline or other text decoration */
+    border-left: 3px solid #28a745; /* Green border to the left of the added text */
+    padding-left: 2px;         /* Padding to separate the text from the border */
+  }
+  
+  /* Styles for removed text */
+  .removed {
+    background-color: #f8d7da; /* Light red/pink background */
+    color: #721c24;            /* Dark red text */
+    text-decoration: line-through; /* Strike-through to indicate removal */
+    border-left: 3px solid #dc3545; /* Red border to the left of the removed text */
+    padding-left: 2px;         /* Padding to separate the text from the border */
+  }
+  
+  /* Styles for modified text */
+  .modified {
+    background-color: #fff3cd; /* Light yellow background */
+    color: #856404;            /* Dark yellow/brown text */
+    text-decoration: underline; /* Underline to indicate modification */
+    border-left: 3px solid #ffc107; /* Yellow border to the left of the modified text */
+    padding-left: 2px;         /* Padding to separate the text from the border */
+  }
+  
+  /* Optional: General styles for all annotations */
+  .added, .removed, .modified {
+    font-weight: bold; /* Make the annotated text bold for emphasis */
+    border-radius: 3px; /* Rounded corners for a nicer appearance */
+    display: inline-block; /* Ensure that the styles apply to inline elements properly */
+    margin: 2px 0; /* Small margin for spacing between lines of annotated text */
+  }
+  
