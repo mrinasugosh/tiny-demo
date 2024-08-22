@@ -1,3 +1,18 @@
+const lightRevisions = [
+  {
+    revisionId: '3',
+    createdAt: '2024-08-21T10:11:21.578Z',
+  },
+  {
+    revisionId: '2',
+    createdAt: '2024-08-20T08:30:21.578Z',
+  },
+  {
+    revisionId: '1',
+    createdAt: '2024-08-19T22:26:21.578Z',
+  },
+];
+
 const revisions = [
   {
     revisionId: '3',
@@ -41,17 +56,19 @@ const getRandomDelay = () => {
 
 
 
-const revisionhistory_fetch = () =>
-  new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(
-        revisions
-          .sort((a, b) =>
-            new Date(a.createdAt) < new Date(b.createdAt) ? -1 : 1
-          )
-          .reverse()
-      );
-    }, getRandomDelay());
+const revisionhistory_fetch = () => Promise.resolve(lightRevisions);
+
+const revisionhistory_fetch_revision = (_editor, revision) => new Promise((resolve) => {
+  console.log("revisionhistory_fetch_revision", revision);
+  let newRevision = null;
+  for (let i = 0; i < revisions.length; i++) {
+    const temp = revisions[i];
+    if (temp.revisionId === revision.revisionId) {
+      newRevision = temp;
+      break;
+    }
+  }
+  resolve(newRevision);
   });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -59,6 +76,7 @@ document.addEventListener('DOMContentLoaded', function () {
         selector: 'textarea',
         plugins: 'code revisionhistory',
         toolbar: 'undo redo revisionhistory | code',
-        revisionhistory_fetch
+        revisionhistory_fetch,
+        revisionhistory_fetch_revision
       });
 });
